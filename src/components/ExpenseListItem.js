@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 const ExpenseListItem = ({ id, description, amount, createdAt }) => (
@@ -11,5 +10,5 @@ const ExpenseListItem = ({ id, description, amount, createdAt }) => (
   </div>
 );
 
-export default connect()(ExpenseListItem);
+export default ExpenseListItem;
 

@@ -2,10 +2,6 @@ import React from 'react';
 import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
 import 'react-dates/initialize';
-import 'react-dates/lib/css/_datepicker.css';
-
-const now = moment();
-console.log(now.format('MMM Do YYYY'));
 
 export default class ExpenseForm extends React.Component {
   constructor(props) {
@@ -41,7 +37,6 @@ export default class ExpenseForm extends React.Component {
     if (createdAt) {
       this.setState(() => ({ createdAt }) );
     }
-
   };
 
   onFocusChange = ({ focused }) => {
@@ -67,7 +62,11 @@ export default class ExpenseForm extends React.Component {
   render() {
     return (
       <div>
-        {this.state.error && this.state.error}
+        {this.state.error && (
+          <p>
+          this.state.error
+          </p>
+        )}
         <form onSubmit={this.onSubmit}>
           <input
             type="text"
