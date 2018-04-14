@@ -1,7 +1,5 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const history = require('connect-history-api-fallback');
-const convert = require('koa-connect');
 
 module.exports = {
   entry: {
@@ -42,13 +40,4 @@ module.exports = {
       filename: 'styles.css',
     }),
   ],
-  serve: {
-    content: [path.join(__dirname, 'public')],
-    add: (app, middleware, options) => {
-      const historyOptions = {
-        // ... see: https://github.com/bripkens/connect-history-api-fallback#options
-      };
-      app.use(convert(history(historyOptions)));
-    },
-  },
 };
