@@ -3,10 +3,7 @@
 ### Linux ###
 *~
 
-public/bundle.js
-public/bundle.js.map
-public/styles.css
-public/styles.css.map
+public/dist/
 
 # temporary files which can be created if a process still has a handle open of a deleted file
 .fuse_hidden*

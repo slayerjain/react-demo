@@ -14,6 +14,9 @@ module.exports = merge(common, {
   // },
   serve: {
     content: [path.join(__dirname, 'public')],
+    dev: {
+      publicPath: '/dist/',
+    },
     add: (app, middleware, options) => {
       const historyOptions = {
         // ... see: https://github.com/bripkens/connect-history-api-fallback#options
