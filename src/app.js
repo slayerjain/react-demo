@@ -4,8 +4,8 @@ import { Provider } from 'react-redux';
 
 import 'react-dates/lib/css/_datepicker.css';
 import 'normalize.css/normalize.css';
-import configureStore from './store/configureStore';
 import './styles/styles.scss';
+import configureStore from './store/configureStore';
 import AppRouter from './routers/AppRouter';
 import { addExpense } from './actions/expenses';
 import { setTextFilter } from './actions/filters';
