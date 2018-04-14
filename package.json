@@ -27,6 +27,7 @@
     "moment": "^2.21.0",
     "node-sass": "4.8.3",
     "normalize.css": "8.0.0",
+    "numeral": "^2.0.6",
     "raf": "^3.4.0",
     "react": "16.3.1",
     "react-addons-shallow-compare": "^15.6.2",
@@ -47,6 +48,9 @@
   "devDependencies": {
     "babel-jest": "^22.4.3",
     "connect-history-api-fallback": "^1.5.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.3",
     "eslint-config-airbnb": "16.1.0",
     "eslint-config-standard": "11.0.0",
     "eslint-plugin-import": "2.11.0",
@@ -55,14 +59,11 @@
     "eslint-plugin-promise": "3.7.0",
     "eslint-plugin-react": "7.7.0",
     "eslint-plugin-standard": "3.0.1",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "enzyme-to-json": "^3.3.3",
     "jest": "^22.4.3",
     "koa-connect": "^2.0.1",
     "mini-css-extract-plugin": "^0.4.0",
-    "regenerator-runtime": "^0.11.1",
     "react-test-renderer": "^16.2.0",
+    "regenerator-runtime": "^0.11.1",
     "webpack-serve": "^0.3.1"
   }
 }
