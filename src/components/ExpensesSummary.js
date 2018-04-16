@@ -7,9 +7,11 @@ import totalExpenses from '../selectors/total-expenses';
 
 export const ExpensesSummary = ({ expenseCount, expenseTotal }) => (
   <div>
+    <h1>
     {
       `Viewing ${expenseCount} expense${expenseCount > 1 ? 's' : ''} totaling ${numeral(expenseTotal/ 100).format('$0,0.00')}`
     }
+    </h1>
   </div>
 );
 
