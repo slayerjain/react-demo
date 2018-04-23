@@ -1,14 +1,36 @@
-import uuid from 'uuid';
 
-const addExpense = ({
+// TODO Remove
+const addExpense = expense => ({
+  type: 'ADD_EXPENSE',
+  expense,
+});
+
+// const startAddExpense = (expenseDate = {}) => (dispatch) => {
+//   const {
+//     description = '',
+//     note = '',
+//     amount = 0,
+//     createdAt = 0,
+//   } = expenseDate;
+//   const expense = {
+//     description, note, amount, createdAt,
+//   };
+//   db.collection('expenses').add(expense).then((ref) => {
+//     dispatch(addExpense({
+//       id: ref.id,
+//       ...expense,
+//     }));
+//   });
+// };
+
+const startAddExpense = ({
   description = '',
   note = '',
   amount = 0,
   createdAt = 0,
 } = {}) => ({
-  type: 'ADD_EXPENSE',
+  type: 'START_ADD_EXPENSE',
   expense: {
-    id: uuid(),
     description,
     note,
     amount,
@@ -27,4 +49,4 @@ const editExpense = (id, updates) => ({
   updates,
 });
 
-export { addExpense, removeExpense, editExpense };
+export { addExpense, removeExpense, editExpense, startAddExpense };

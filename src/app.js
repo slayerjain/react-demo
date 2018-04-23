@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
@@ -7,15 +8,16 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import configureStore from './store/configureStore';
 import AppRouter from './routers/AppRouter';
-import { addExpense } from './actions/expenses';
+import { startAddExpense } from './actions/expenses';
 import { setTextFilter } from './actions/filters';
 import getVisibleExpense from './selectors/expenses';
+import './firebase/firebase';
 
 const store = configureStore();
 
-store.dispatch(addExpense({ description: 'Water Bill', amount: 100 }));
-store.dispatch(addExpense({ description: 'Gas Bill', amount: 300 }));
-store.dispatch(addExpense({ description: 'Water Bill', amount: 100, createdAt: 109500 }));
+store.dispatch(startAddExpense({ description: 'Water Bill', amount: 100 }));
+store.dispatch(startAddExpense({ description: 'Gas Bill', amount: 300 }));
+store.dispatch(startAddExpense({ description: 'Water Bill', amount: 100, createdAt: 109500 }));
 store.dispatch(setTextFilter('water'));
 
 setTimeout(() => {

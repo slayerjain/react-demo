@@ -1,5 +1,6 @@
 # Created by https://www.gitignore.io/api/node,macos,linux,reactnative
 
+
 ### Linux ###
 *~
 
@@ -102,7 +103,7 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
+.env.*
 
 
 ### ReactNative ###
