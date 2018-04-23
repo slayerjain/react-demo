@@ -7,7 +7,7 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 if (process.env.NODE_ENV === 'test') {
   dotenv.config({ path: '.env.test' });
-} else if (process.env.NODE_ENV === 'development') {
+} else {
   dotenv.config({ path: '.env.development' });
 }
 module.exports = {
@@ -48,7 +48,7 @@ module.exports = {
       // both options are optional
       filename: 'styles.css',
     }),
-    new webpack.NodeEnvironmentPlugin([
+    new webpack.EnvironmentPlugin([
       'FIREBASE_API_KEY',
       'FIREBASE_AUTH_DOMAIN',
       'FIREBASE_DATABASE_URL',
