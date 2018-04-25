@@ -1,7 +1,6 @@
-import { call, put, takeEvery } from 'redux-saga/effects';
+import { call, put, takeEvery, all } from 'redux-saga/effects';
 import { AddToDBException } from '../errors/errors';
-import { addExpenseToFirebase } from '../async/firebase';
-
+import { addExpenseToFirebase, getExpensesFromFirebase } from '../async/firebase';
 
 // worker Saga: will be fired on START_ADD_EXPENSE actions
 export function* startAddExpense(action = { expense: {} }) {
@@ -27,12 +26,25 @@ export function* startAddExpense(action = { expense: {} }) {
   });
 }
 
+export function* startSetExpense() {
+  const expenses = yield call(getExpensesFromFirebase);
+  if (expenses) {
+    yield put({
+      type: 'SET_EXPENSES',
+      expenses,
+    });
+  }
+}
+
 /*
   Starts fetchUser on each dispatched `USER_FETCH_REQUESTED` action.
   Allows concurrent fetches of user.
 */
 function* mySaga() {
-  yield takeEvery('START_ADD_EXPENSE', startAddExpense);
+  yield all([
+    takeEvery('START_ADD_EXPENSE', startAddExpense),
+    takeEvery('START_SET_EXPENSES', startSetExpense),
+  ]);
 }
 
 export default mySaga;

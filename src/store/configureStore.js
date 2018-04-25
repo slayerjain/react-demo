@@ -2,6 +2,7 @@ import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import expensesReducer from '../reducers/expenses';
 import filtersReducer from '../reducers/filters';
+import statusReducer from '../reducers/status';
 import mySaga from '../sagas/expenses';
 // create the saga middleware
 const sagaMiddleware = createSagaMiddleware();
@@ -13,6 +14,7 @@ export default () => {
     combineReducers({
       expenses: expensesReducer,
       filters: filtersReducer,
+      status: statusReducer,
     }),
     composeEnhancers(applyMiddleware(sagaMiddleware)),
   );

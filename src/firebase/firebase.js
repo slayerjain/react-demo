@@ -19,17 +19,17 @@ export { firebase, db as default };
 
 // // const demoData = db.collection('Demo').doc('demoDoc');
 //
-const expenses = db.collection('expenses');
-
-expenses.add({
-  description: 'Dosa',
-  note: '',
-  amount: 109500,
-}).then(() => {
-  console.log('Added the record');
-}).catch((err) => {
-  console.log(err);
-});
+// const expenses = db.collection('expenses');
+//
+// expenses.add({
+//   description: 'Dosa',
+//   note: '',
+//   amount: 109500,
+// }).then(() => {
+//   console.log('Added the record');
+// }).catch((err) => {
+//   console.log(err);
+// });
 //
 // expenses.add({
 //   description: 'Phone bill',

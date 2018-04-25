@@ -4,6 +4,7 @@ import expenses from '../fixtures/expenses';
 import { startAddExpense } from '../../sagas/expenses';
 import uuid from '../__mocks__/uuid';
 import { addExpenseToFirebase } from '../../async/firebase';
+import db from '../../firebase/firebase';
 
 test('should setup remove expense action object', () => {
   const action = removeExpense({ id: '123abc' });

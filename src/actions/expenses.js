@@ -5,24 +5,6 @@ const addExpense = expense => ({
   expense,
 });
 
-// const startAddExpense = (expenseDate = {}) => (dispatch) => {
-//   const {
-//     description = '',
-//     note = '',
-//     amount = 0,
-//     createdAt = 0,
-//   } = expenseDate;
-//   const expense = {
-//     description, note, amount, createdAt,
-//   };
-//   db.collection('expenses').add(expense).then((ref) => {
-//     dispatch(addExpense({
-//       id: ref.id,
-//       ...expense,
-//     }));
-//   });
-// };
-
 const startAddExpense = ({
   description = '',
   note = '',
@@ -49,4 +31,8 @@ const editExpense = (id, updates) => ({
   updates,
 });
 
-export { addExpense, removeExpense, editExpense, startAddExpense };
+const startSetExpenses = () => ({
+  type: 'START_SET_EXPENSES',
+});
+
+export { addExpense, removeExpense, editExpense, startAddExpense, startSetExpenses };
