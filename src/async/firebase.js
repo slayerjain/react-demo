@@ -22,3 +22,17 @@ export const getExpensesFromFirebase = () => (
     throw err;
   })
 );
+
+export const removeExpensesFromFirebase = id => (
+  db.collection('expenses').doc(id).delete().then(() => id)
+    .catch((err) => {
+      throw err;
+    })
+);
+
+export const editExpenseFromFirebase = (id, updates) => (
+  db.collection('expenses').doc(id).update(updates).then(() => true)
+    .catch((err) => {
+      throw err;
+    })
+);

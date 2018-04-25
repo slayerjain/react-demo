@@ -1,9 +1,10 @@
 import { call, put, takeEvery, all } from 'redux-saga/effects';
 import { AddToDBException } from '../errors/errors';
-import { addExpenseToFirebase, getExpensesFromFirebase } from '../async/firebase';
+import { addExpenseToFirebase, getExpensesFromFirebase, removeExpensesFromFirebase, editExpenseFromFirebase } from '../async/firebase';
+
 
 // worker Saga: will be fired on START_ADD_EXPENSE actions
-export function* startAddExpense(action = { expense: {} }) {
+export function* addExpense(action = { expense: {} }) {
   const {
     description = '',
     amount = 0,
@@ -26,12 +27,33 @@ export function* startAddExpense(action = { expense: {} }) {
   });
 }
 
-export function* startSetExpense() {
+export function* setExpense() {
   const expenses = yield call(getExpensesFromFirebase);
   if (expenses) {
     yield put({
       type: 'SET_EXPENSES',
       expenses,
+    });
+  }
+}
+
+export function* removeExpense({ id }) {
+  const idDeleted = yield call(removeExpensesFromFirebase, id);
+  if (idDeleted) {
+    yield put({
+      type: 'REMOVE_EXPENSE',
+      id,
+    });
+  }
+}
+
+export function* editExpense({ id, updates }) {
+  const isUpdated = yield call(editExpenseFromFirebase, id, updates);
+  if (isUpdated) {
+    yield put({
+      type: 'EDIT_EXPENSE',
+      id,
+      updates,
     });
   }
 }
@@ -42,8 +64,10 @@ export function* startSetExpense() {
 */
 function* mySaga() {
   yield all([
-    takeEvery('START_ADD_EXPENSE', startAddExpense),
-    takeEvery('START_SET_EXPENSES', startSetExpense),
+    takeEvery('START_ADD_EXPENSE', addExpense),
+    takeEvery('START_SET_EXPENSES', setExpense),
+    takeEvery('START_REMOVE_EXPENSE', removeExpense),
+    takeEvery('START_EDIT_EXPENSE', editExpense),
   ]);
 }
 

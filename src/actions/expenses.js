@@ -20,13 +20,18 @@ const startAddExpense = ({
   },
 });
 
-const removeExpense = ({ id } = {}) => ({
-  type: 'REMOVE_EXPENSE',
+// const removeExpense = ({ id } = {}) => ({
+//   type: 'REMOVE_EXPENSE',
+//   id,
+// });
+
+const startRemoveExpense = ({ id } = {}) => ({
+  type: 'START_REMOVE_EXPENSE',
   id,
 });
 
-const editExpense = (id, updates) => ({
-  type: 'EDIT_EXPENSE',
+const startEditExpense = (id, updates) => ({
+  type: 'START_EDIT_EXPENSE',
   id,
   updates,
 });
@@ -35,4 +40,4 @@ const startSetExpenses = () => ({
   type: 'START_SET_EXPENSES',
 });
 
-export { addExpense, removeExpense, editExpense, startAddExpense, startSetExpenses };
+export { addExpense, startEditExpense, startAddExpense, startSetExpenses, startRemoveExpense };
