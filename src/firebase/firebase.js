@@ -11,11 +11,14 @@ const config = {
   messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
 };
 
+console.log(config);
+
 firebase.initializeApp(config);
 
 const db = firebase.firestore();
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
-export { firebase, db as default };
+export { firebase, googleAuthProvider, db as default };
 
 // // const demoData = db.collection('Demo').doc('demoDoc');
 //

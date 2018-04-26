@@ -1,15 +1,15 @@
 import db from '../firebase/firebase';
 
-export const addExpenseToFirebase = expense => (
-  db.collection('expenses').add(expense)
+export const addExpenseToFirebase = (expense, uid) => (
+  db.collection(`users/${uid}/expenses`).add(expense)
     .then(ref => ref.id)
     .catch((err) => {
       throw err;
     })
 );
 
-export const getExpensesFromFirebase = () => (
-  db.collection('expenses').get().then((querySnapshot) => {
+export const getExpensesFromFirebase = uid => (
+  db.collection(`users/${uid}/expenses`).get().then((querySnapshot) => {
     const expenses = [];
     querySnapshot.forEach((expense) => {
       expenses.push({
@@ -19,19 +19,19 @@ export const getExpensesFromFirebase = () => (
     });
     return expenses;
   }).catch((err) => {
-    throw err;
+    console.log(err);
   })
 );
 
-export const removeExpensesFromFirebase = id => (
-  db.collection('expenses').doc(id).delete().then(() => id)
+export const removeExpensesFromFirebase = (id, uid) => (
+  db.collection(`users/${uid}/expenses`).doc(id).delete().then(() => id)
     .catch((err) => {
       throw err;
     })
 );
 
-export const editExpenseFromFirebase = (id, updates) => (
-  db.collection('expenses').doc(id).update(updates).then(() => true)
+export const editExpenseFromFirebase = (id, updates, uid) => (
+  db.collection(`users/${uid}/expenses`).doc(id).update(updates).then(() => true)
     .catch((err) => {
       throw err;
     })
