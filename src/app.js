@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 
 import 'react-dates/lib/css/_datepicker.css';
 import 'normalize.css/normalize.css';
+import 'react-chat-elements/dist/main.css';
 import './styles/styles.scss';
 import configureStore from './store/configureStore';
 import AppRouter, { history } from './routers/AppRouter';

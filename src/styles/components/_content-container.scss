@@ -1,0 +1,39 @@
+.content-container {
+  margin: 0 auto;
+  padding: 0 $m-size;
+  max-width: 110rem;
+}
+
+.content-container--chat-view-split {
+  display: flex;
+  flex-direction: row;
+  //justify-content: space-between;
+  /* But in order to take all the available space we need
+     to use this */
+  //position: absolute;
+  //top: 0;
+  padding: 0;
+  height: calc(100vh - 60px);
+  //bottom: 0;
+  overflow: auto;
+}
+
+.content-container--chat-list {
+  margin: 0;
+  width: 35%;
+}
+
+.content-container--chat-list-item {
+  width: 100%;
+}
+
+.content-container--message-list {
+  width: 100%;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container--message-input {
+
+}

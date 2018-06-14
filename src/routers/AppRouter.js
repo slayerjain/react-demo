@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Router, Route, Switch } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
 
-import ExpenseDashboardPage from '../components/ExpenseDashboardPage';
+import MainChatPage from '../components/MainChatPage';
 import NotFoundPage from '../components/NotFoundPage';
 import LoginPage from '../components/LoginPage';
 import PrivateRoute from './PrivateRoute';
@@ -23,7 +23,7 @@ const AppRouter = ({ status }) => {
       <div>
         <Switch>
           <PublicRoute path="/" component={LoginPage} exact />
-          <PrivateRoute path="/dashboard" component={} exact />
+          <PrivateRoute path="/dashboard" component={MainChatPage} exact />
           <Route component={NotFoundPage} />
         </Switch>
       </div>

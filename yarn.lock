@@ -1793,6 +1793,10 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
+classnames@^2.2.3, classnames@^2.2.5:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
+
 cli-boxes@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/cli-boxes/-/cli-boxes-1.0.0.tgz#4fa917c3e59c94a004cd61f8ee509da651687143"
@@ -4021,6 +4025,10 @@ icss-utils@^2.1.0:
   dependencies:
     postcss "^6.0.1"
 
+identicon.js@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/identicon.js/-/identicon.js-2.3.2.tgz#bfebb66c8047f386333ffa595fe2912345a0708d"
+
 ieee754@^1.1.4:
   version "1.1.11"
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.11.tgz#c16384ffe00f5b7835824e67b6f2bd44a5229455"
@@ -5253,6 +5261,10 @@ loader-utils@^1.0.1, loader-utils@^1.0.2, loader-utils@^1.1.0:
     emojis-list "^2.0.0"
     json5 "^0.5.0"
 
+loaders.css@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/loaders.css/-/loaders.css-0.1.2.tgz#3a9fb43726c73334a38142af9d0629019b658743"
+
 locate-path@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-2.0.0.tgz#2b568b265eec944c6d9c0de9c3dbbbca0354cd8e"
@@ -5279,6 +5291,10 @@ lodash.clonedeep@^4.3.2:
 lodash.flattendeep@^4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.flattendeep/-/lodash.flattendeep-4.4.0.tgz#fb030917f86a3134e5bc9bec0d69e0013ddfedb2"
+
+lodash.isequal@^4.1.4:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
 
 lodash.isplainobject@^4.0.6:
   version "4.0.6"
@@ -5344,6 +5360,12 @@ loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.2.0, loose-envify@^1.3
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.3.1.tgz#d1a8ad33fa9ce0e713d65fdd0ac8b748d478c848"
   dependencies:
     js-tokens "^3.0.0"
+
+lorem-ipsum@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/lorem-ipsum/-/lorem-ipsum-1.0.4.tgz#30b72a3b1e191f55062af8c7dfab291ae4fbd912"
+  dependencies:
+    optimist "~0.3.5"
 
 loud-rejection@^1.0.0, loud-rejection@^1.6.0:
   version "1.6.0"
@@ -5656,6 +5678,10 @@ mixin-object@^2.0.1:
 moment@>=1.6.0, moment@^2.21.0:
   version "2.22.0"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.0.tgz#7921ade01017dd45186e7fee5f424f0b8663a730"
+
+moment@^2.18.1:
+  version "2.22.1"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.1.tgz#529a2e9bf973f259c9643d237fda84de3a26e8ad"
 
 move-concurrently@^1.0.1:
   version "1.0.1"
@@ -6110,6 +6136,12 @@ optimist@^0.6.1:
   resolved "https://registry.yarnpkg.com/optimist/-/optimist-0.6.1.tgz#da3ea74686fa21a19a111c326e90eb15a0196686"
   dependencies:
     minimist "~0.0.1"
+    wordwrap "~0.0.2"
+
+optimist@~0.3.5:
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/optimist/-/optimist-0.3.7.tgz#c90941ad59e4273328923074d2cf2e7cbc6ec0d9"
+  dependencies:
     wordwrap "~0.0.2"
 
 optionator@^0.8.1, optionator@^0.8.2:
@@ -6735,6 +6767,12 @@ progress@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.0.tgz#8a1be366bf8fc23db2bd23f10c6fe920b4389d1f"
 
+progressbar.js@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/progressbar.js/-/progressbar.js-1.0.1.tgz#f7fbfc195240fe0bb32f6f7bdb2e7ff400ea71f9"
+  dependencies:
+    shifty "^1.5.2"
+
 promise-inflight@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/promise-inflight/-/promise-inflight-1.0.1.tgz#98472870bf228132fcbdd868129bad12c3c029e3"
@@ -6934,6 +6972,16 @@ react-addons-shallow-compare@^15.6.2:
     fbjs "^0.8.4"
     object-assign "^4.1.0"
 
+react-chat-elements@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/react-chat-elements/-/react-chat-elements-0.9.0.tgz#f7c188086c87c20a3e46d2eb3d352234820dd722"
+  dependencies:
+    classnames "^2.2.5"
+    moment "^2.18.1"
+    react-icons "^2.2.5"
+    react-progress-bar.js "^0.2.3"
+    react-spinkit "^3.0.0"
+
 react-dates@^16.3.6:
   version "16.5.0"
   resolved "https://registry.yarnpkg.com/react-dates/-/react-dates-16.5.0.tgz#eef0f6f1b1d218fef07e7e7891610a94a5d7a70d"
@@ -6960,6 +7008,16 @@ react-dom@16.3.1:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
+react-icon-base@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-icon-base/-/react-icon-base-2.1.0.tgz#a196e33fdf1e7aaa1fda3aefbb68bdad9e82a79d"
+
+react-icons@^2.2.5:
+  version "2.2.7"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-2.2.7.tgz#d7860826b258557510dac10680abea5ca23cf650"
+  dependencies:
+    react-icon-base "2.1.0"
+
 react-is@^16.3.1:
   version "16.3.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.3.1.tgz#ee66e6d8283224a83b3030e110056798488359ba"
@@ -6983,6 +7041,13 @@ react-portal@^4.1.2:
   resolved "https://registry.yarnpkg.com/react-portal/-/react-portal-4.1.4.tgz#3fc3f3f3a0e81362ab1dc9afa3c4bb5a84ec76a3"
   dependencies:
     prop-types "^15.5.8"
+
+react-progress-bar.js@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/react-progress-bar.js/-/react-progress-bar.js-0.2.3.tgz#7e80091f60834041def87f125a6803d9427e0719"
+  dependencies:
+    lodash.isequal "^4.1.4"
+    progressbar.js "^1.0.1"
 
 react-reconciler@^0.7.0:
   version "0.7.0"
@@ -7026,6 +7091,15 @@ react-router@^4.2.0:
     path-to-regexp "^1.7.0"
     prop-types "^15.5.4"
     warning "^3.0.0"
+
+react-spinkit@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/react-spinkit/-/react-spinkit-3.0.0.tgz#31fdaf4e18177766c57d1b1f3330290f8492a85a"
+  dependencies:
+    classnames "^2.2.3"
+    loaders.css "^0.1.2"
+    object-assign "^4.1.0"
+    prop-types "^15.5.8"
 
 react-test-renderer@^16.0.0-0, react-test-renderer@^16.2.0:
   version "16.3.1"
@@ -7793,6 +7867,10 @@ shelljs@^0.8.0:
 shellwords@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/shellwords/-/shellwords-0.1.1.tgz#d6b9181c1a48d397324c84871efbcfc73fc0654b"
+
+shifty@^1.5.2:
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/shifty/-/shifty-1.5.4.tgz#d4362fc914dd280ddf6e522be408b21203208346"
 
 signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
